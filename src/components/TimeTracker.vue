@@ -44,7 +44,7 @@
       </div>
       <!--Nombre, Menu y submenu -->
       <div class="relative">
-        <span @click="openMenu = !openMenu; openSubmenu = false">
+        <span class="cursor-pointer" @click="openMenu = !openMenu; openSubmenu = false">
           <b>{{ infoEmpleado.firstName}} {{ infoEmpleado.lastName}}</b>
           <i class="arrow down ml-3"></i>
         </span>
@@ -52,7 +52,7 @@
           v-show="openMenu"
           class="bg-white w-64 absolute top-10 -right-2 rounded-md shadow-md main"
         >
-          <li class="p-3 relative" @click="openSubmenu = !openSubmenu">
+          <li class="p-3 relative cursor-pointer" @click="openSubmenu = !openSubmenu">
             <i class="arrow left mr-1"></i>
             <span>Mis cuentas</span>
             <ul v-show="openSubmenu" class="bg-white absolute top-0 rounded-md -left-48 shadow-md">
@@ -89,7 +89,7 @@
           <li class="p-3">Mi perfil</li>
           <hr>
           <!-- Mostrar solo cuando este online -->
-          <li class="p-3 bg-red-200" v-show="isOnline" @click="clockOut(infoEmpleado)">Cerrar Sesión</li>
+          <li class="p-3">Cerrar Sesión</li>
         </ul>
       </div>
     </section>
